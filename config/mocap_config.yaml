@@ -1,0 +1,20 @@
+/**:
+  ros__parameters:
+    use_sim_time: False
+  platform:
+    ros__parameters:
+      external_odom: true
+      external_odom_topic: "self_localization/pose"
+  state_estimator:
+    ros__parameters:
+      plugin_name: mocap_pose
+      mocap_topic: "/rigid_bodies"
+      twist_smooth_filter_cte: 0.1
+      orientation_smooth_filter_cte: 0.1
+
+  ## namespace of the drone
+  ## set rigid_body_name to id set in 'Motive'
+drone0:
+  state_estimator:
+    ros__parameters:
+      rigid_body_name: '33'
